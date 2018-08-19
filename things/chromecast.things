@@ -1,0 +1,6 @@
+// Wohnzimmer AUX
+chromecast:audio:e4f28736031d1b90a4d90184e19748b5 [ ipAddress="192.168.2.50" ]
+// Indoor
+chromecast:audiogroup:28e28143-09e9-4d90-bace-ea952ee9ff82
+// Everywhere
+chromecast:audiogroup:033cacf4-0498-4bdf-a86d-9e4cbf90c94a

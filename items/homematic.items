@@ -1,0 +1,11 @@
+Switch RT_1 "RT/Button1" { channel="homematic:HM-RC-4-3:raspberrymatic:OEQ0412558:2#PRESS_SHORT" }
+Switch RT_2 "RT/Button2" { channel="homematic:HM-RC-4-3:raspberrymatic:OEQ0412558:1#PRESS_SHORT" }
+Switch RT_3 "RT/Button3" { channel="homematic:HM-RC-4-3:raspberrymatic:OEQ0412558:4#PRESS_SHORT" }
+Switch RT_4 "RT/Button4" { channel="homematic:HM-RC-4-3:raspberrymatic:OEQ0412558:3#PRESS_SHORT" }
+
+Switch RT_1_LONG "RT/Button1/Long" { channel="homematic:HM-RC-4-3:raspberrymatic:OEQ0412558:2#PRESS_LONG" }
+Switch RT_2_LONG "RT/Button2/Long" { channel="homematic:HM-RC-4-3:raspberrymatic:OEQ0412558:1#PRESS_LONG" }
+Switch RT_3_LONG "RT/Button3/Long" { channel="homematic:HM-RC-4-3:raspberrymatic:OEQ0412558:4#PRESS_LONG" }
+Switch RT_4_LONG "RT/Button4/Long" { channel="homematic:HM-RC-4-3:raspberrymatic:OEQ0412558:3#PRESS_LONG" }
+
+Switch RT_AWAY "RT/Away" { channel="homematic:HM-RC-4-3:raspberrymatic:OEQ0412558:0#UNREACH" }

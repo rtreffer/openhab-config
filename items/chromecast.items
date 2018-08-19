@@ -1,0 +1,2 @@
+Dimmer Volume "Wohnzimmer AUX Chromecast Volume" { channel="chromecast:audio:e4f28736031d1b90a4d90184e19748b5:volume" }
+Player Music  "Wohnzimmer AUX Chromecast Music"  { channel="chromecast:audio:e4f28736031d1b90a4d90184e19748b5:control" }

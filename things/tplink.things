@@ -1,0 +1,6 @@
+tplinksmarthome:hs110:aquarien "Aquarien"    [ ipAddress="192.168.2.31", refresh=60 ]
+tplinksmarthome:hs110:tva      "TV Feed A"   [ ipAddress="192.168.2.32", refresh=60 ]
+tplinksmarthome:hs110:tvb      "TV Feed B"   [ ipAddress="192.168.2.33", refresh=60 ]
+tplinksmarthome:hs110:outdoor  "Outdoor"     [ ipAddress="192.168.2.34", refresh=60 ]
+tplinksmarthome:hs110:fridge   "Kühlschrank" [ ipAddress="192.168.2.35", refresh=60 ]
+tplinksmarthome:hs110:print3d  "3D printing" [ ipAddress="192.168.2.36", refresh=60 ]

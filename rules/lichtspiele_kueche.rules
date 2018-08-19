@@ -1,0 +1,44 @@
+import org.joda.time.DateTime
+
+rule "daylight_colour_temp_kueche"
+when
+    // recompute every 60 seconds
+    Time cron "47 * * ? * * *"
+then
+  if ((Kueche_Color.state as PercentType).intValue <= 0) {
+    return
+  }
+  val current = (Kueche_ColorTemperature.state as PercentType).intValue
+  val desired = (DaylightCT.state as PercentType).intValue
+  if (Math.abs(current - desired) >= 1) {
+    Kueche_ColorTemperature.sendCommand(Math.round(0.9*current + 0.1*desired + Math.signum(desired - current)))
+  }
+end
+
+rule "kueche_spots_auto_brightness"
+when
+    // recompute every 60 seconds
+    Time cron "51 * * ? * * *"
+then
+  var desired = 15
+
+  // raise brightness a bit during the day
+  val sunrise = new DateTime(Sunrise_Time.state.toString)
+  val sunset = new DateTime(Sunset_Time.state.toString)
+  val now = new DateTime()
+
+  if (now.millis > sunrise.millis && now.millis < sunset.millis) {
+      desired = desired + 15
+  }
+
+  // raise if kitchen light is on
+  if ((Kueche_Color.state as PercentType).intValue > 0) {
+      desired = desired + 30
+  }
+
+  // interpolate!
+  val current = (Kueche_Spots_Brightness.state as PercentType).intValue
+  if (Math.abs(current - desired) >= 1) {
+    Kueche_Spots_Brightness.sendCommand(Math.round(0.9*current + 0.1*desired + Math.signum(desired - current)))
+  }
+end

@@ -1,0 +1,3 @@
+Bridge homematic:bridge:raspberrymatic [ gatewayAddress="192.168.2.27" ] {
+  Thing HM-RC-4-3 OEQ0412558 "RT"
+}

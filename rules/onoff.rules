@@ -1,0 +1,42 @@
+val String filename = "onoff.rules"
+
+rule "Home ON"
+when
+  Item RT_1_LONG changed to ON or
+  Item RT_1_LONG changed to OFF
+then
+  Toilette_Brightness.sendCommand(ON)
+  Flur_Wohnzimmer_Color.sendCommand(ON)
+  Flur_Gaestezimmer_Color.sendCommand(ON)
+  Gaestezimmer_Fenster_Brightness.sendCommand(ON)
+  Gaestezimmer_Couch_Brightness.sendCommand(ON)
+  Max_Fenster_Brightness.sendCommand(ON)
+  Max_Tuer_Brightness.sendCommand(ON)
+  Kueche_Color.sendCommand(ON)
+  Balkon_Color.sendCommand(ON)
+  Schlafzimmer_Brightness.sendCommand(ON)
+  Wohnzimmer_Couch_Color.sendCommand(ON)
+  Wohnzimmer_Flur_Color.sendCommand(ON)
+end
+
+rule "Home OFF"
+when
+  Item RT_4_LONG changed to ON or
+  Item RT_4_LONG changed to OFF
+then
+  Toilette_Brightness.sendCommand(OFF)
+  Flur_Wohnzimmer_Color.sendCommand(OFF)
+  Flur_Gaestezimmer_Color.sendCommand(OFF)
+  Gaestezimmer_Fenster_Brightness.sendCommand(OFF)
+  Gaestezimmer_Couch_Brightness.sendCommand(OFF)
+  Max_Fenster_Brightness.sendCommand(OFF)
+  Max_Tuer_Brightness.sendCommand(OFF)
+  Kueche_Color.sendCommand(OFF)
+  Balkon_Color.sendCommand(OFF)
+  Schlafzimmer_Brightness.sendCommand(OFF)
+  Schlafzimmer_Bloom_Color.sendCommand(OFF)
+  Wohnzimmer_Couch_Color.sendCommand(OFF)
+  Wohnzimmer_Flur_Color.sendCommand(OFF)
+end
+
+// vim: syntax=Xtend

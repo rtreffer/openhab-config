@@ -1,0 +1,41 @@
+// Special items
+Switch   FireTV_OnOff_Switch   "FireTV ON/OFF"   {channel="hue:0000:living:firetv_switch:switch"}
+
+// Lights Wohnzimmer
+Color    Wohnzimmer_Flur_Color              "Wohnzimmer / Flur Color"               {channel="hue:0210:living:wohnzimmer_flur:color"}
+Dimmer   Wohnzimmer_Flur_ColorTemperature   "Wohnzimmer / Flur ColorTemperature"    {channel="hue:0210:living:wohnzimmer_flur:color_temperature"}
+
+Color    Wohnzimmer_Couch_Color              "Wohnzimmer / Couch Color"               {channel="hue:0210:living:wohnzimmer_couch:color"}
+Dimmer   Wohnzimmer_Couch_ColorTemperature   "Wohnzimmer / Couch ColorTemperatur"     {channel="hue:0210:living:wohnzimmer_couch:color_temperature"}
+
+// Light Flur
+Color    Flur_Wohnzimmer_Color              "Flur / Wohnzimmer Color"               {channel="hue:0210:living:flur_wohnzimmer:color"}
+Dimmer   Flur_Wohnzimmer_ColorTemperature   "Flur / Wohnzimmer ColorTemperature"    {channel="hue:0210:living:flur_wohnzimmer:color_temperature"}
+Color    Flur_Gaestezimmer_Color            "Flur / Gästezimmer Color"              {channel="hue:0210:living:flur_gaestezimmer:color"}
+Dimmer   Flur_Gaestezimmer_ColorTemperature "Flur / Gästezimmer ColorTemperature"   {channel="hue:0210:living:flur_gaestezimmer:color_temperature"}
+
+// Lights Gästezimmer
+Dimmer   Gaestezimmer_Fenster_Brightness   "Gästezimmer / Fenster Brightness"   {channel="hue:0100:living:gaestezimmer_fenster:brightness"}
+Dimmer   Gaestezimmer_Couch_Brightness     "Gästezimmer / Couch Brightness"     {channel="hue:0100:living:gaestezimmer_couch:brightness"}
+
+// Lights Max
+Dimmer   Max_Fenster_Brightness   "Max / Fenster Brightness"   {channel="hue:0100:living:max_fenster:brightness"}
+Dimmer   Max_Tuer_Brightness      "Max / Tür Brightness"       {channel="hue:0100:living:max_tuer:brightness"}
+
+// Lights Küche
+Color    Kueche_Color              "Küche Color"               {channel="hue:0210:living:kueche:color"}
+Dimmer   Kueche_ColorTemperature   "Küche Color Temperature"   {channel="hue:0210:living:kueche:color_temperature"}
+Dimmer   Kueche_Spots_Brightness   "Küche Spots Brightness"    {channel="hue:0100:living:kueche_spots:brightness"}
+
+// Light Balkon
+Color    Balkon_Color              "Balkon Color"              {channel="hue:0210:living:balkon:color"}
+
+// Lights Toilette
+Dimmer   Toilette_ColorTemperature   "Toilette Color Temperature"   {channel="hue:0220:living:toilette:color_temperature"}
+Dimmer   Toilette_Brightness         "Toilette Brightness"          {channel="hue:0220:living:toilette:brightness"}
+
+// Lights Schlafzimmer
+Dimmer   Schlafzimmer_ColorTemperature   "Schlafzimmer Color Temperature"   {channel="hue:0220:living:schlafzimmer:color_temperature"}
+Dimmer   Schlafzimmer_Brightness         "Schlafzimmer Brightness"          {channel="hue:0220:living:schlafzimmer:brightness"}
+
+Color    Schlafzimmer_Bloom_Color   "Schlafzimmer Bloom Color"       {channel="hue:0200:living:schlafzimmer_bloom:color"}

@@ -1,0 +1,7 @@
+String   Harmony_Beamer_ButtonPress "Beamer button press"   {channel="harmonyhub:device:living:projector:buttonPress"}
+String   Harmony_Audio_ButtonPress  "Audio button press"   {channel="harmonyhub:device:living:audio:buttonPress"}
+String   Harmony_HDMI_ButtonPress   "HDMI Switch button press"   {channel="harmonyhub:device:living:hdmi_switch:buttonPress"}
+String   Harmony_FireTV_ButtonPress "Fire TV button press"   {channel="harmonyhub:device:living:firetv:buttonPress"}
+String   Harmony_Sky_ButtonPress    "Sky button press"   {channel="harmonyhub:device:living:sky:buttonPress"}
+
+String   HarmonyHub_CurrentActivity "Harmony Current activity"   {channel="harmonyhub:hub:living:currentActivity"}

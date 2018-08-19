@@ -1,0 +1,15 @@
+val String filename = "presence"
+
+rule "RT here"
+when
+  Item RT_AWAY changed to OFF
+then
+  logInfo(filename, "rt keys home")
+end
+
+rule "RT gone"
+when
+  Item RT_AWAY changed to ON
+then
+  logInfo(filename, "rt keys gone")
+end

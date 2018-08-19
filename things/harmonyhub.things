@@ -1,0 +1,7 @@
+Bridge harmonyhub:hub:living [ host="192.168.2.49"] {
+    device firetv      [ name="Amazon Fire TV" ]
+    device sky         [ name="Sky Digital DVR" ]
+    device hdmi_switch [ name="HDMI Switch" ]
+    device audio       [ name="LG Heimkino" ]
+    device projector   [ name="BenQ Projektor" ]
+}
