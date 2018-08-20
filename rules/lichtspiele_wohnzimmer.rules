@@ -17,7 +17,7 @@ then
 
     val currentBrightness = (Wohnzimmer_Couch_Color.state as HSBType).brightness.intValue
     if (Math.abs(currentBrightness - brightness) >= 1) {
-      Wohnzimmer_Couch_Color.sendCommand(Math.round(currentBrightness + Math.signum(brightness - currentBrightness)))
+      Wohnzimmer_Couch_Color.sendCommand(Math.round(0.9*currentBrightness + 0.1*brightness + Math.signum(brightness - currentBrightness)))
     }
   }
   if ((Wohnzimmer_Flur_Color.state as PercentType).intValue > 0) {
@@ -29,7 +29,7 @@ then
 
     val currentBrightness = (Wohnzimmer_Flur_Color.state as HSBType).brightness.intValue
     if (Math.abs(currentBrightness - brightness) >= 1) {
-      Wohnzimmer_Flur_Color.sendCommand(Math.round(currentBrightness + Math.signum(brightness - currentBrightness)))
+      Wohnzimmer_Flur_Color.sendCommand(Math.round(0.9*currentBrightness + 0.1*brightness + Math.signum(brightness - currentBrightness)))
     }
   }
 end

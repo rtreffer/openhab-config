@@ -17,10 +17,10 @@ end
 
 rule "kueche_spots_auto_brightness"
 when
-    // recompute every 60 seconds
-    Time cron "51 * * ? * * *"
+    // update 2x per minute
+    Time cron "21/30 * * ? * * *"
 then
-  var desired = 15
+  var desired = 10
 
   // raise brightness a bit during the day
   val sunrise = new DateTime(Sunrise_Time.state.toString)
