@@ -45,7 +45,7 @@ then
        w = night
    }
 
-   if ((DaylightCT.state as PercentType).intValue != Math.round(w * 100)) {
+   if (DaylightCT.state == null || (DaylightCT.state as PercentType).intValue != Math.round(w * 100)) {
     DaylightCT.sendCommand(w * 100)
    }
 end
@@ -96,7 +96,7 @@ then
        w = night
    }
 
-   if ((DaylightCT.state as PercentType).intValue != Math.round(w * 100)) {
+   if (DaylightCT.state == null || (DaylightCT.state as PercentType).intValue != Math.round(w * 100)) {
     DaylightCT.sendCommand(w * 100)
    }
 end
