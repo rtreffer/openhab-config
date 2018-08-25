@@ -2,25 +2,31 @@ Switch WiFi_Switch_Aquarien "Aquarien An/Aus" [ "Switchable" ] { channel="tplink
 Number WiFi_Switch_Aquarien_power "Aquarien Strom" { channel="tplinksmarthome:hs110:aquarien:power" }
 Number WiFi_Switch_Aquarien_voltage "Aquarien V" { channel="tplinksmarthome:hs110:aquarien:voltage" }
 Number WiFi_Switch_Aquarien_current "Aquarien A" { channel="tplinksmarthome:hs110:aquarien:current" }
-//Number WiFi_Switch_Aquarien_energy_usage "Aquarien Stromverbrauch" { channel="tplinksmarthome:hs110:aquarien:energyUsage" }
 
 Switch WiFi_Switch_TV_A "TV A An/Aus" [ "Switchable" ] { channel="tplinksmarthome:hs110:tva:switch" }
 Number WiFi_Switch_TV_A_power "TV A Strom" { channel="tplinksmarthome:hs110:tva:power" }
 Number WiFi_Switch_TV_A_voltage "TV A V" { channel="tplinksmarthome:hs110:tva:voltage" }
 Number WiFi_Switch_TV_A_current "TV A A" { channel="tplinksmarthome:hs110:tva:current" }
-//Number WiFi_Switch_TV_A_energy_usage "TV A Stromverbrauch" { channel="tplinksmarthome:hs110:tva:energyUsage" }
 
 Switch WiFi_Switch_TV_B "TV B An/Aus" [ "Switchable" ] { channel="tplinksmarthome:hs110:tvb:switch" }
 Number WiFi_Switch_TV_B_power "TV B Strom" { channel="tplinksmarthome:hs110:tvb:power" }
 Number WiFi_Switch_TV_B_voltage "TV B V" { channel="tplinksmarthome:hs110:tvb:voltage" }
 Number WiFi_Switch_TV_B_current "TV B A" { channel="tplinksmarthome:hs110:tvb:current" }
-//Number WiFi_Switch_TV_B_energy_usage "TV B Stromverbrauch" { channel="tplinksmarthome:hs110:tvb:energyUsage" }
+
+Switch WiFi_Switch_TV_C "TV C An/Aus" [ "Switchable" ] { channel="tplinksmarthome:hs110:tvc:switch" }
+Number WiFi_Switch_TV_C_power "TV C Strom" { channel="tplinksmarthome:hs110:tvc:power" }
+Number WiFi_Switch_TV_C_voltage "TV C V" { channel="tplinksmarthome:hs110:tvc:voltage" }
+Number WiFi_Switch_TV_C_current "TV C A" { channel="tplinksmarthome:hs110:tvc:current" }
+
+Switch WiFi_Switch_TV_D "TV D An/Aus" [ "Switchable" ] { channel="tplinksmarthome:hs110:tvd:switch" }
+Number WiFi_Switch_TV_D_power "TV D Strom" { channel="tplinksmarthome:hs110:tvd:power" }
+Number WiFi_Switch_TV_D_voltage "TV D V" { channel="tplinksmarthome:hs110:tvd:voltage" }
+Number WiFi_Switch_TV_D_current "TV D A" { channel="tplinksmarthome:hs110:tvd:current" }
 
 Switch WiFi_Switch_Outdoor "Outdoor An/Aus" [ "Switchable" ] { channel="tplinksmarthome:hs110:outdoor:switch" }
 Number WiFi_Switch_Outdoor_power "Outdoor Strom" { channel="tplinksmarthome:hs110:outdoor:power" }
 Number WiFi_Switch_Outdoor_voltage "Outdoor V" { channel="tplinksmarthome:hs110:outdoor:voltage" }
 Number WiFi_Switch_Outdoor_current "Outdoor A" { channel="tplinksmarthome:hs110:outdoor:current" }
-//Number WiFi_Switch_Outdoor_energy_usage "Outdoor Stromverbrauch" { channel="tplinksmarthome:hs110:outdoor:energyUsage" }
 
 Switch WiFi_Switch_Guest_Fridge "Gästekühlschrank An/Aus" [ "Switchable" ] { channel="tplinksmarthome:hs110:fridge:switch" }
 Number WiFi_Switch_Guest_Fridge_power "Gästekühlschrank Strom" { channel="tplinksmarthome:hs110:fridge:power" }

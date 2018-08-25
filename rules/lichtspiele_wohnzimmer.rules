@@ -3,8 +3,9 @@ when
     // recompute every 6 seconds (10x per minute)
     Time cron "1/6 * * ? * * *"
 then
+  val tvon = (TVisON.state !== NULL) && ((TVisON.state as OnOffType) == ON)
   var brightness = 100
-  if ((WiFi_Switch_TV_A_power.state as DecimalType).intValue > 200) {
+  if (tvon) {
     brightness = 30
   }
 

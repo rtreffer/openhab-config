@@ -1,5 +1,6 @@
 // Special items
-Switch   FireTV_OnOff_Switch   "FireTV ON/OFF"   {channel="hue:0000:living:firetv_switch:switch"}
+Switch   FireTV_OnOff_Switch          "FireTV ON/OFF"          {channel="hue:0000:living:firetv_switch:switch"}
+Switch   Nintendo_Switch_OnOff_Switch "Nintendo Switch ON/OFF" {channel="hue:0000:living:nintendo_switch:switch"}
 
 // Lights Wohnzimmer
 Color    Wohnzimmer_Flur_Color              "Wohnzimmer / Flur Color"               {channel="hue:0210:living:wohnzimmer_flur:color"}

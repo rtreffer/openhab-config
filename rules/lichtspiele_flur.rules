@@ -10,7 +10,7 @@ then
 
   if ((Flur_Wohnzimmer_Color.state as PercentType).intValue > 0) {
     val desired = (DaylightCT.state as PercentType).intValue
-    if (Flur_Wohnzimmer_ColorTemperature.state == null) {
+    if (Flur_Wohnzimmer_ColorTemperature.state == NULL) {
       Flur_Wohnzimmer_ColorTemperature.sendCommand(desired)
     } else {
       val current = (Flur_Wohnzimmer_ColorTemperature.state as PercentType).intValue
@@ -26,7 +26,7 @@ then
   }
   if ((Flur_Gaestezimmer_Color.state as PercentType).intValue > 0) {
     val desired = (DaylightCT.state as PercentType).intValue
-    if (Flur_Gaestezimmer_ColorTemperature.state == null) {
+    if (Flur_Gaestezimmer_ColorTemperature.state == NULL) {
       Flur_Gaestezimmer_ColorTemperature.sendCommand(desired)
     } else {
       val current = (Flur_Gaestezimmer_ColorTemperature.state as PercentType).intValue

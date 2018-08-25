@@ -1,0 +1,2 @@
+DateTime PingNinaIphoneLastSeen "Last time Nina was on the network" { channel="network:pingdevice:nina_iphone:lastseen" }
+DateTime PingRenePhoneLastSeen "Last time Rene was on the network" { channel="network:pingdevice:rene_android:lastseen" }

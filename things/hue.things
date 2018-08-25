@@ -1,6 +1,7 @@
 Bridge hue:bridge:living [ ipAddress="192.168.2.30", userName="HCpV8HdHFkmOAz6pk5wkVDwB16NP9TiDPUy-Tg2-" ] {
 
     0000 firetv_switch        [ lightId="10" ]
+    0000 nintendo_switch      [ lightId="19" ]
 
     0210 kueche               [ lightId="3"  ]
     0100 kueche_spots         [ lightId="18" ]
