@@ -1,0 +1,88 @@
+// Make sure we turn off the devices if we don't need them...
+
+rule "hdmi_devices_off"
+when
+    Item TVisON changed to OFF
+then
+    WiFi_Switch_TV_B.sendCommand(OFF)
+    FireTV_OnOff_Switch.sendCommand(OFF)
+end
+
+rule "hdmi_devices_on"
+when
+    Item TVisON changed to ON
+then
+    WiFi_Switch_TV_B.sendCommand(ON)
+    FireTV_OnOff_Switch.sendCommand(ON)
+end
+
+rule "hdmi_devices_sync"
+when
+    Time cron "0 0 5 ? * * *"
+then
+    WiFi_Switch_TV_B.sendCommand((TVisON.state as OnOffType))
+    FireTV_OnOff_Switch.sendCommand((TVisON.state as OnOffType))
+end
+
+rule "audio_off"
+when
+    Item TVisON changed to OFF
+then
+    WiFi_Switch_TV_C.sendCommand(OFF)
+end
+
+rule "audio_sync_off_graceful"
+when
+    Time cron "0 0 6 ? * * *"
+then
+    if (WiFi_Switch_TV_C_power.state == NULL) {
+        return
+    }
+    val power = (WiFi_Switch_TV_C_power.state as Number).intValue
+
+    if (power < 10) {
+        return
+    }
+
+    Harmony_Audio_ButtonPress.sendCommand("Power")
+end
+
+rule "audio_sync_off_hard"
+when
+    Time cron "0 2 6 ? * * *"
+then
+    if (WiFi_Switch_TV_C_power.state == NULL) {
+        return
+    }
+    val power = (WiFi_Switch_TV_C_power.state as Number).intValue
+
+    if (power < 10) {
+        return
+    }
+
+    Harmony_Audio_ButtonPress.sendCommand("Power")
+end
+
+rule "audio_on"
+when
+    Item TVisON changed to ON
+then
+    val powerWasOff = (WiFi_Switch_TV_C_power.state == OFF)
+    WiFi_Switch_TV_C.sendCommand(ON)
+
+    if (WiFi_Switch_TV_C_power.state == NULL) {
+        return
+    }
+
+    val power = (WiFi_Switch_TV_C_power.state as Number).intValue
+
+    if (power >= 10) {
+        return
+    }
+
+    if (powerWasOff) {
+        Thread::sleep(1000)
+    }
+
+    Harmony_Audio_ButtonPress.sendCommand("Power")
+end

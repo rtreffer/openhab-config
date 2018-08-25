@@ -1,0 +1,42 @@
+val filename="tv"
+
+var tv_on = 0
+var tv_off = 30
+
+rule "tv_on"
+when
+    // recompute every 10 seconds
+    Time cron "5/10 * * ? * * *"
+then
+    if (WiFi_Switch_TV_D_power.state == NULL) {
+        return
+    }
+    val power = (WiFi_Switch_TV_D_power.state as Number).intValue
+    val nostate = TVisON.state == NULL
+    val on = (!nostate) && ((TVisON.state as OnOffType) == ON)
+
+    if (power < 10) {
+        tv_off += 10
+        tv_on = 0
+        if (on || nostate) {
+            TVisON.sendCommand(OFF)
+        }
+        return
+    }
+
+    if (power >= 30 && power <= 40 && tv_off >= 30) {
+        Harmony_Beamer_ButtonPress.sendCommand("PowerOn")
+        TVisON.sendCommand(ON)
+        tv_on = 10
+        tv_off = 0
+        return
+    }
+
+    if (power > 200) {
+        tv_off = 0
+        tv_on += 10
+        if (nostate || !on) {
+            TVisON.sendCommand(ON)
+        }
+    }
+end
