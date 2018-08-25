@@ -1,0 +1,38 @@
+rule "daylight_color_temp_flur"
+when
+    // recompute every 6 seconds (10x per minute)
+    Time cron "4/6 * * ? * * *"
+then
+  var brightness = 100
+  if ((WiFi_Switch_TV_A_power.state as DecimalType).intValue > 200) {
+    brightness = 70
+  }
+
+  if ((Flur_Wohnzimmer_Color.state as PercentType).intValue > 0) {
+    val desired = (DaylightCT.state as PercentType).intValue
+    if (Flur_Wohnzimmer_ColorTemperature.state == null) {
+      Flur_Wohnzimmer_ColorTemperature.sendCommand(desired)
+    } else {
+      val current = (Flur_Wohnzimmer_ColorTemperature.state as PercentType).intValue
+      if (Math.abs(current - desired) >= 1) {
+        Flur_Wohnzimmer_ColorTemperature.sendCommand(Math.round(current + Math.signum(desired - current)))
+      }
+    }
+
+    val currentBrightness = (Flur_Wohnzimmer_Color.state as HSBType).brightness.intValue
+    if (Math.abs(currentBrightness - brightness) >= 1) {
+      Flur_Wohnzimmer_Color.sendCommand(Math.round(0.9*currentBrightness + 0.1*brightness + Math.signum(brightness - currentBrightness)))
+    }
+  }
+  if ((Flur_Gaestezimmer_Color.state as PercentType).intValue > 0) {
+    val desired = (DaylightCT.state as PercentType).intValue
+    if (Flur_Gaestezimmer_ColorTemperature.state == null) {
+      Flur_Gaestezimmer_ColorTemperature.sendCommand(desired)
+    } else {
+      val current = (Flur_Gaestezimmer_ColorTemperature.state as PercentType).intValue
+      if (Math.abs(current - desired) >= 1) {
+        Flur_Gaestezimmer_ColorTemperature.sendCommand(Math.round(current + Math.signum(desired - current)))
+      }
+    }
+  }
+end
