@@ -4,7 +4,7 @@ when
     Time cron "4/6 * * ? * * *"
 then
   var brightness = 100
-  if ((WiFi_Switch_TV_A_power.state as DecimalType).intValue > 200) {
+  if ((TVisON.state as OnOffType) == ON) {
     brightness = 70
   }
 
