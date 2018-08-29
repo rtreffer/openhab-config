@@ -67,7 +67,7 @@ rule "audio_on"
 when
     Item TVisON changed to ON
 then
-    val powerWasOff = (WiFi_Switch_TV_C_power.state == OFF)
+    val powerWasOff = (WiFi_Switch_TV_C.state == OFF)
     WiFi_Switch_TV_C.sendCommand(ON)
 
     if (WiFi_Switch_TV_C_power.state == NULL) {
