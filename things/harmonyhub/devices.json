@@ -1,0 +1,29 @@
+{
+  "devices": [
+    {
+      "id": "54208370",
+      "slug": "amazon-fire-tv",
+      "label": "Amazon Fire TV"
+    },
+    {
+      "id": "54208548",
+      "slug": "hdmi-switch",
+      "label": "HDMI Switch"
+    },
+    {
+      "id": "54208562",
+      "slug": "sky-digital-dvr",
+      "label": "Sky Digital DVR"
+    },
+    {
+      "id": "54208572",
+      "slug": "lg-heimkino",
+      "label": "LG Heimkino"
+    },
+    {
+      "id": "54208698",
+      "slug": "benq-projektor",
+      "label": "BenQ Projektor"
+    }
+  ]
+}

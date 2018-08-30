@@ -1,0 +1,289 @@
+{
+  "commands": [
+    {
+      "name": "Number0",
+      "slug": "0",
+      "label": "0"
+    },
+    {
+      "name": "Number1",
+      "slug": "1",
+      "label": "1"
+    },
+    {
+      "name": "Number2",
+      "slug": "2",
+      "label": "2"
+    },
+    {
+      "name": "Number3",
+      "slug": "3",
+      "label": "3"
+    },
+    {
+      "name": "Number4",
+      "slug": "4",
+      "label": "4"
+    },
+    {
+      "name": "Number5",
+      "slug": "5",
+      "label": "5"
+    },
+    {
+      "name": "Number6",
+      "slug": "6",
+      "label": "6"
+    },
+    {
+      "name": "Number7",
+      "slug": "7",
+      "label": "7"
+    },
+    {
+      "name": "Number8",
+      "slug": "8",
+      "label": "8"
+    },
+    {
+      "name": "Number9",
+      "slug": "9",
+      "label": "9"
+    },
+    {
+      "name": "PowerToggle",
+      "slug": "power-toggle",
+      "label": "Power Toggle"
+    },
+    {
+      "name": "Clear",
+      "slug": "clear",
+      "label": "Clear"
+    },
+    {
+      "name": "Mute",
+      "slug": "mute",
+      "label": "Mute"
+    },
+    {
+      "name": "VolumeDown",
+      "slug": "volume-down",
+      "label": "Volume Down"
+    },
+    {
+      "name": "VolumeUp",
+      "slug": "volume-up",
+      "label": "Volume Up"
+    },
+    {
+      "name": "DirectionDown",
+      "slug": "direction-down",
+      "label": "Direction Down"
+    },
+    {
+      "name": "DirectionLeft",
+      "slug": "direction-left",
+      "label": "Direction Left"
+    },
+    {
+      "name": "DirectionRight",
+      "slug": "direction-right",
+      "label": "Direction Right"
+    },
+    {
+      "name": "DirectionUp",
+      "slug": "direction-up",
+      "label": "Direction Up"
+    },
+    {
+      "name": "Select",
+      "slug": "select",
+      "label": "Select"
+    },
+    {
+      "name": "Stop",
+      "slug": "stop",
+      "label": "Stop"
+    },
+    {
+      "name": "Play",
+      "slug": "play",
+      "label": "Play"
+    },
+    {
+      "name": "Rewind",
+      "slug": "rewind",
+      "label": "Rewind"
+    },
+    {
+      "name": "Eject",
+      "slug": "eject",
+      "label": "Eject"
+    },
+    {
+      "name": "Pause",
+      "slug": "pause",
+      "label": "Pause"
+    },
+    {
+      "name": "FastForward",
+      "slug": "fast-forward",
+      "label": "Fast Forward"
+    },
+    {
+      "name": "Record",
+      "slug": "record",
+      "label": "Record"
+    },
+    {
+      "name": "FrameAdvance",
+      "slug": "frame-advance",
+      "label": "Frame Advance"
+    },
+    {
+      "name": "SkipBackward",
+      "slug": "skip-backward",
+      "label": "Skip Backward"
+    },
+    {
+      "name": "SkipForward",
+      "slug": "skip-forward",
+      "label": "Skip Forward"
+    },
+    {
+      "name": "TopMenu",
+      "slug": "top-menu",
+      "label": "Top Menu"
+    },
+    {
+      "name": "Menu",
+      "slug": "menu",
+      "label": "Menu"
+    },
+    {
+      "name": "Subtitle",
+      "slug": "subtitle",
+      "label": "Subtitle"
+    },
+    {
+      "name": "Audio",
+      "slug": "audio",
+      "label": "Audio"
+    },
+    {
+      "name": "Repeat",
+      "slug": "repeat",
+      "label": "Repeat"
+    },
+    {
+      "name": "PrevPreset",
+      "slug": "prev-preset",
+      "label": "Prev Preset"
+    },
+    {
+      "name": "ScanDown",
+      "slug": "scan-down",
+      "label": "Scan Down"
+    },
+    {
+      "name": "ScanUp",
+      "slug": "scan-up",
+      "label": "Scan Up"
+    },
+    {
+      "name": "NextPreset",
+      "slug": "next-preset",
+      "label": "Next Preset"
+    },
+    {
+      "name": "Sleep",
+      "slug": "sleep",
+      "label": "Sleep"
+    },
+    {
+      "name": "Green",
+      "slug": "green",
+      "label": "Green"
+    },
+    {
+      "name": "Red",
+      "slug": "red",
+      "label": "Red"
+    },
+    {
+      "name": "Blue",
+      "slug": "blue",
+      "label": "Blue"
+    },
+    {
+      "name": "Yellow",
+      "slug": "yellow",
+      "label": "Yellow"
+    },
+    {
+      "name": "Info",
+      "slug": "info",
+      "label": "Info"
+    },
+    {
+      "name": "Exit",
+      "slug": "exit",
+      "label": "Exit"
+    },
+    {
+      "name": "Display",
+      "slug": "display",
+      "label": "Display"
+    },
+    {
+      "name": "Home",
+      "slug": "home",
+      "label": "Home"
+    },
+    {
+      "name": "InputNext",
+      "slug": "inputnext",
+      "label": "InputNext"
+    },
+    {
+      "name": "InputOptical",
+      "slug": "inputoptical",
+      "label": "InputOptical"
+    },
+    {
+      "name": "Mono/Stereo",
+      "slug": "monostereo",
+      "label": "Mono/Stereo"
+    },
+    {
+      "name": "PopUp",
+      "slug": "popup",
+      "label": "PopUp"
+    },
+    {
+      "name": "PTY",
+      "slug": "pty",
+      "label": "PTY"
+    },
+    {
+      "name": "PtySearch",
+      "slug": "ptysearch",
+      "label": "PtySearch"
+    },
+    {
+      "name": "RDS",
+      "slug": "rds",
+      "label": "RDS"
+    },
+    {
+      "name": "SoundEffect",
+      "slug": "soundeffect",
+      "label": "SoundEffect"
+    },
+    {
+      "name": "SpeakerLevel",
+      "slug": "speakerlevel",
+      "label": "SpeakerLevel"
+    }
+  ]
+}

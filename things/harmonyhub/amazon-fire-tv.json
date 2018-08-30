@@ -1,0 +1,94 @@
+{
+  "commands": [
+    {
+      "name": "DirectionDown",
+      "slug": "direction-down",
+      "label": "Direction Down"
+    },
+    {
+      "name": "DirectionLeft",
+      "slug": "direction-left",
+      "label": "Direction Left"
+    },
+    {
+      "name": "DirectionRight",
+      "slug": "direction-right",
+      "label": "Direction Right"
+    },
+    {
+      "name": "DirectionUp",
+      "slug": "direction-up",
+      "label": "Direction Up"
+    },
+    {
+      "name": "Select",
+      "slug": "select",
+      "label": "Select"
+    },
+    {
+      "name": "Stop",
+      "slug": "stop",
+      "label": "Stop"
+    },
+    {
+      "name": "Play",
+      "slug": "play",
+      "label": "Play"
+    },
+    {
+      "name": "Rewind",
+      "slug": "rewind",
+      "label": "Rewind"
+    },
+    {
+      "name": "Pause",
+      "slug": "pause",
+      "label": "Pause"
+    },
+    {
+      "name": "FastForward",
+      "slug": "fast-forward",
+      "label": "Fast Forward"
+    },
+    {
+      "name": "SkipBackward",
+      "slug": "skip-backward",
+      "label": "Skip Backward"
+    },
+    {
+      "name": "SkipForward",
+      "slug": "skip-forward",
+      "label": "Skip Forward"
+    },
+    {
+      "name": "Menu",
+      "slug": "menu",
+      "label": "Menu"
+    },
+    {
+      "name": "Back",
+      "slug": "back",
+      "label": "Back"
+    },
+    {
+      "name": "Sleep",
+      "slug": "sleep",
+      "label": "Sleep"
+    },
+    {
+      "name": "Exit",
+      "slug": "exit",
+      "label": "Exit"
+    },
+    {
+      "name": "Delete",
+      "slug": "backspace",
+      "label": "Backspace"
+    },
+    {
+      "name": "Home",
+      "slug": "home",
+      "label": "Home"
+    }
+  ]
+}

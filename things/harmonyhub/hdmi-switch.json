@@ -1,0 +1,109 @@
+{
+  "commands": [
+    {
+      "name": "PowerToggle",
+      "slug": "power-toggle",
+      "label": "Power Toggle"
+    },
+    {
+      "name": "Audio",
+      "slug": "audio",
+      "label": "Audio"
+    },
+    {
+      "name": "PipToggle",
+      "slug": "pip-toggle",
+      "label": "Pip Toggle"
+    },
+    {
+      "name": "A-B",
+      "slug": "a-b",
+      "label": "A-B"
+    },
+    {
+      "name": "ARC",
+      "slug": "arc",
+      "label": "ARC"
+    },
+    {
+      "name": "OutputAInput1",
+      "slug": "outputainput1",
+      "label": "OutputAInput1"
+    },
+    {
+      "name": "OutputAInput2",
+      "slug": "outputainput2",
+      "label": "OutputAInput2"
+    },
+    {
+      "name": "OutputAInput3",
+      "slug": "outputainput3",
+      "label": "OutputAInput3"
+    },
+    {
+      "name": "OutputAInput4",
+      "slug": "outputainput4",
+      "label": "OutputAInput4"
+    },
+    {
+      "name": "OutputAInput5",
+      "slug": "outputainput5",
+      "label": "OutputAInput5"
+    },
+    {
+      "name": "OutputAInput6",
+      "slug": "outputainput6",
+      "label": "OutputAInput6"
+    },
+    {
+      "name": "OutputAOn/Off",
+      "slug": "outputaonoff",
+      "label": "OutputAOn/Off"
+    },
+    {
+      "name": "OutputBInput1",
+      "slug": "outputbinput1",
+      "label": "OutputBInput1"
+    },
+    {
+      "name": "OutputBInput2",
+      "slug": "outputbinput2",
+      "label": "OutputBInput2"
+    },
+    {
+      "name": "OutputBInput3",
+      "slug": "outputbinput3",
+      "label": "OutputBInput3"
+    },
+    {
+      "name": "OutputBInput4",
+      "slug": "outputbinput4",
+      "label": "OutputBInput4"
+    },
+    {
+      "name": "OutputBInput5",
+      "slug": "outputbinput5",
+      "label": "OutputBInput5"
+    },
+    {
+      "name": "OutputBInput6",
+      "slug": "outputbinput6",
+      "label": "OutputBInput6"
+    },
+    {
+      "name": "OutputBOn/Off",
+      "slug": "outputbonoff",
+      "label": "OutputBOn/Off"
+    },
+    {
+      "name": "PipEnter",
+      "slug": "pipenter",
+      "label": "PipEnter"
+    },
+    {
+      "name": "PipSelect",
+      "slug": "pipselect",
+      "label": "PipSelect"
+    }
+  ]
+}

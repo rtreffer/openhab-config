@@ -1,0 +1,169 @@
+{
+  "commands": [
+    {
+      "name": "PowerOff",
+      "slug": "power-off",
+      "label": "Power Off"
+    },
+    {
+      "name": "PowerOn",
+      "slug": "power-on",
+      "label": "Power On"
+    },
+    {
+      "name": "Mute",
+      "slug": "mute",
+      "label": "Mute"
+    },
+    {
+      "name": "VolumeDown",
+      "slug": "volume-down",
+      "label": "Volume Down"
+    },
+    {
+      "name": "VolumeUp",
+      "slug": "volume-up",
+      "label": "Volume Up"
+    },
+    {
+      "name": "DirectionDown",
+      "slug": "direction-down",
+      "label": "Direction Down"
+    },
+    {
+      "name": "DirectionLeft",
+      "slug": "direction-left",
+      "label": "Direction Left"
+    },
+    {
+      "name": "DirectionRight",
+      "slug": "direction-right",
+      "label": "Direction Right"
+    },
+    {
+      "name": "DirectionUp",
+      "slug": "direction-up",
+      "label": "Direction Up"
+    },
+    {
+      "name": "Select",
+      "slug": "select",
+      "label": "Select"
+    },
+    {
+      "name": "Stop",
+      "slug": "stop",
+      "label": "Stop"
+    },
+    {
+      "name": "Play",
+      "slug": "play",
+      "label": "Play"
+    },
+    {
+      "name": "Rewind",
+      "slug": "rewind",
+      "label": "Rewind"
+    },
+    {
+      "name": "Pause",
+      "slug": "pause",
+      "label": "Pause"
+    },
+    {
+      "name": "FastForward",
+      "slug": "fast-forward",
+      "label": "Fast Forward"
+    },
+    {
+      "name": "SkipBackward",
+      "slug": "skip-backward",
+      "label": "Skip Backward"
+    },
+    {
+      "name": "SkipForward",
+      "slug": "skip-forward",
+      "label": "Skip Forward"
+    },
+    {
+      "name": "Menu",
+      "slug": "menu",
+      "label": "Menu"
+    },
+    {
+      "name": "Back",
+      "slug": "back",
+      "label": "Back"
+    },
+    {
+      "name": "3D",
+      "slug": "3d",
+      "label": "3D"
+    },
+    {
+      "name": "Auto",
+      "slug": "auto",
+      "label": "Auto"
+    },
+    {
+      "name": "Bright",
+      "slug": "bright",
+      "label": "Bright"
+    },
+    {
+      "name": "ColorManage",
+      "slug": "colormanage",
+      "label": "ColorManage"
+    },
+    {
+      "name": "ColorTemp",
+      "slug": "colortemp",
+      "label": "ColorTemp"
+    },
+    {
+      "name": "Contrast",
+      "slug": "contrast",
+      "label": "Contrast"
+    },
+    {
+      "name": "EcoBlank",
+      "slug": "ecoblank",
+      "label": "EcoBlank"
+    },
+    {
+      "name": "FineTune",
+      "slug": "finetune",
+      "label": "FineTune"
+    },
+    {
+      "name": "Gamma",
+      "slug": "gamma",
+      "label": "Gamma"
+    },
+    {
+      "name": "Invert",
+      "slug": "invert",
+      "label": "Invert"
+    },
+    {
+      "name": "Keystone",
+      "slug": "keystone",
+      "label": "Keystone"
+    },
+    {
+      "name": "Mode",
+      "slug": "mode",
+      "label": "Mode"
+    },
+    {
+      "name": "Sharp",
+      "slug": "sharp",
+      "label": "Sharp"
+    },
+    {
+      "name": "Source",
+      "slug": "source",
+      "label": "Source"
+    }
+  ]
+}
