@@ -84,5 +84,5 @@ then
         Thread::sleep(1000)
     }
 
-    Harmony_Audio_ButtonPress.sendCommand("Power")
+    Harmony_Audio_ButtonPress.sendCommand("PowerToggle")
 end
