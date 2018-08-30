@@ -1,0 +1,2 @@
+network:pingdevice:nina_iphone [ hostname="192.168.2.90" ]
+network:pingdevice:rene_android [ hostname="192.168.2.91" ]
