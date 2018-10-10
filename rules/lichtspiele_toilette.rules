@@ -3,6 +3,9 @@ when
     // recompute every 60 seconds
     Time cron "48 * * ? * * *"
 then
+  if (LightMode.state != "DAY" && LightMode.state != "DAYLIGHT") {
+    return
+  }
   if ((Toilette_Brightness.state as PercentType).intValue <= 0) {
     return
   }

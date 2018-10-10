@@ -1,0 +1,5 @@
+Switch Projector_Power "Beamer An/Aus" [ "Switchable" ] { channel="benqprojector:projector:living:power" }
+Dimmer Projector_Brightness "Beamer Helligkeit" { channel="benqprojector:projector:living:brightness" }
+Dimmer Projector_Saturation "Beamer Sättigung" { channel="benqprojector:projector:living:saturation" }
+Dimmer Projector_Contrast "Beamer Kontrast" { channel="benqprojector:projector:living:contrast" }
+String Projector_ColorTemp "Beamer Farbtemperatur" { channel="benqprojector:projector:living:colortemp" }

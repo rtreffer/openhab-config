@@ -16,8 +16,10 @@ Color    Flur_Gaestezimmer_Color            "Flur / Gästezimmer Color"         
 Dimmer   Flur_Gaestezimmer_ColorTemperature "Flur / Gästezimmer ColorTemperature"   {channel="hue:0210:living:flur_gaestezimmer:color_temperature"}
 
 // Lights Gästezimmer
-Dimmer   Gaestezimmer_Fenster_Brightness   "Gästezimmer / Fenster Brightness"   {channel="hue:0100:living:gaestezimmer_fenster:brightness"}
-Dimmer   Gaestezimmer_Couch_Brightness     "Gästezimmer / Couch Brightness"     {channel="hue:0100:living:gaestezimmer_couch:brightness"}
+Color   Gaestezimmer_Fenster_Color            "Gästezimmer / Fenster Color"            {channel="hue:0210:living:gaestezimmer_fenster:color"}
+Dimmer  Gaestezimmer_Fenster_ColorTemperature "Gästezimmer / Fenster ColorTemperature" {channel="hue:0210:living:gaestezimmer_fenster:color_temperature"}
+Color   Gaestezimmer_Couch_Color              "Gästezimmer / Couch Color"              {channel="hue:0210:living:gaestezimmer_couch:color"}
+Dimmer  Gaestezimmer_Couch_ColorTemperature   "Gästezimmer / Couch ColorTemperature"   {channel="hue:0210:living:gaestezimmer_couch:color_temperature"}
 
 // Lights Max
 Dimmer   Max_Fenster_Brightness   "Max / Fenster Brightness"   {channel="hue:0100:living:max_fenster:brightness"}

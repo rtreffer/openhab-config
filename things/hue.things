@@ -3,13 +3,13 @@ Bridge hue:bridge:living [ ipAddress="192.168.2.30", userName="HCpV8HdHFkmOAz6pk
     0000 firetv_switch        [ lightId="10" ]
     0000 nintendo_switch      [ lightId="19" ]
 
-    0210 kueche               [ lightId="3"  ]
+    0210 kueche               [ lightId="20" ]
     0100 kueche_spots         [ lightId="18" ]
 
     0210 flur_gaestezimmer    [ lightId="4"  ]
     0210 flur_wohnzimmer      [ lightId="17" ]
 
-    0210 balkon               [ lightId="5"  ]
+    0210 balkon               [ lightId="21" ]
 
     0100 max_tuer             [ lightId="8"  ]
     0100 max_fenster          [ lightId="9"  ]
@@ -17,10 +17,13 @@ Bridge hue:bridge:living [ ipAddress="192.168.2.30", userName="HCpV8HdHFkmOAz6pk
     0220 toilette             [ lightId="11" ]
 
     0220 schlafzimmer         [ lightId="12" ]
-    0200 schlafzimmer_bloom   [ lightId="2" ]
+    0200 schlafzimmer_bloom   [ lightId="2"  ]
 
-    0100 gaestezimmer_fenster [ lightId="13" ]
-    0100 gaestezimmer_couch   [ lightId="14" ]
+    0210 gaestezimmer_fenster [ lightId="5"  ]
+    0210 gaestezimmer_couch   [ lightId="3"  ]
+
+    0100 gaestezimmer_fenster_old [ lightId="13" ]
+    0100 gaestezimmer_couch_old   [ lightId="14" ]
 
     0210 wohnzimmer_couch     [ lightId="15" ]
     0210 wohnzimmer_flur      [ lightId="16" ]

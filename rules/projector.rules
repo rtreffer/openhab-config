@@ -1,0 +1,103 @@
+val String filename = "projector.rules"
+var Number smoothedLight = 0
+
+rule "projector_picture_settings"
+when
+  Time cron "12/10 * * ? * * *"
+then
+  if (Projector_Power.state == NULL || (Projector_Power.state as OnOffType) == OFF) {
+    return
+  }
+
+  if (Motion_Wohnzimmer_Illuminance.state == NULL) {
+    return
+  }
+
+  // light level (illuminance), clipped to [5000..25000]
+  var Number light = (Motion_Wohnzimmer_Illuminance.state as DecimalType)
+  if (light == NULL) {
+    return
+  }
+
+  if (light < 5000.0) {
+    light = 5000
+  }
+  if (light > 25000.0) {
+    light = 25000.0
+  }
+  // illuminance [5000..25000] -> [0..1]
+  light = (light - 5000.0) / 20000.0
+
+  logInfo(filename, "normalized light: " + light)
+
+  // smooth the light level a bit
+  if (smoothedLight == NULL || smoothedLight == 0) {
+    smoothedLight = light
+  } else {
+    smoothedLight = 0.9*smoothedLight + 0.1*light
+  }
+  light = smoothedLight
+
+  // compute the target brightness, saturation and contrast
+  // what is a bright (daylight watchable) picture?
+  // - high brightness (e.g. 75%)
+  // - lower contrast (e.g. 10%)
+
+  val Number b = (100 * (0.5 + light*0.30)).intValue
+  val Number c = (100 * (0.5 - light*0.1)).intValue
+
+  if (Projector_Brightness.state !== NULL) {
+    val Number cb = (Projector_Brightness.state as DecimalType).intValue
+    if (cb !== NULL && cb != b) {
+      logInfo(filename, "desired brightness: " + b + ", current brightness: " + cb)
+      if (b > cb) {
+        if (b - cb > 5) {
+            Projector_Brightness.sendCommand(cb+5)
+        } else {
+            Projector_Brightness.sendCommand(b)
+        }
+      } else if (b < cb) {
+        if (cb - b > 5) {
+            Projector_Brightness.sendCommand(cb-5)
+        } else {
+            Projector_Brightness.sendCommand(b)
+        }
+      }
+    }
+  }
+
+  if (Projector_Contrast.state !== NULL) {
+    val Number cc = (Projector_Contrast.state as DecimalType).intValue
+    if (cc !== NULL && cc != c) {
+      logInfo(filename, "desired contrast: " + c + ", current contrast: " + cc)
+      if (c > cc) {
+        if (c - cc > 5) {
+            Projector_Contrast.sendCommand(cc+5)
+        } else {
+            Projector_Contrast.sendCommand(c)
+        }
+      } else if (c < cc) {
+        if (cc - c > 5) {
+            Projector_Contrast.sendCommand(cc-5)
+        } else {
+            Projector_Contrast.sendCommand(c)
+        }
+      }
+    }
+  }
+
+end
+
+rule "projector_picture_temp_on"
+when
+  Item Projector_Power changed from OFF to ON
+then
+  if (DaylightCT == NULL) {
+    return
+  }
+  if (DaylightCT > 55) {
+    Projector_ColorTemp.sendCommand("WARM")
+  } else {
+    Projector_ColorTemp.sendCommand("NORMAL")
+  }
+end

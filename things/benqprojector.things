@@ -1,0 +1,1 @@
+benqprojector:projector:living [ serialPort="/dev/ttyUSB0" ]

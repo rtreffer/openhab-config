@@ -1,5 +1,8 @@
 // The daylight ct dimmer is a color temperature reference value
-Dimmer DaylightCT "daylight emulation"
+Dimmer DaylightCT "daylight emulation" <light>
+
+// LightMode: manual, day, daylight, colorwheel
+String LightMode "Lichtermodus" <colorlight>
 
 // Switch to act on TV state (on/off)
 Switch TVisON "tv is on"

@@ -1,0 +1,5 @@
+Switch Motion_Wohnzimmer_Occupancy "Wohnzimmer/Anwesenheit" <motion> {mqtt="<[broker:zigbee/motion_wohnzimmer:state:JS(getZigbeeOccupancy.js)]" }
+Number Motion_Wohnzimmer_Illuminance "Wohnzimmer/Helligkeit" {mqtt="<[broker:zigbee/motion_wohnzimmer:state:JSONPATH($.illuminance)]" }
+Number Motion_Wohnzimmer_Temperature "Wohnzimmer/Temperatur" <temperature> {mqtt="<[broker:zigbee/motion_wohnzimmer:state:JSONPATH($.temperature)]" }
+
+Number Motion_Wohnzimmer_Battery "Wohnzimmer/Battery" <battery> {mqtt="<[broker:zigbee/motion_wohnzimmer:state:JSONPATH($.battery)]" }

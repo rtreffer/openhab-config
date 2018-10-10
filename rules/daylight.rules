@@ -1,10 +1,23 @@
 import org.joda.time.DateTime
 
-rule "daylight_colour_temp"
+rule "day_color"
+when
+  Item LightMode changed to "DAY"
+then
+  DaylightCT.sendCommand(50)
+end
+
+rule "daylight_color_temp"
 when
     // recompute every 60 seconds
     Time cron "42 * * ? * MON-FRI *"
 then
+   if (LightMode.state === NULL) {
+     LightMode.sendCommand("DAYLIGHT")
+   }
+   if (LightMode.state != "DAYLIGHT") {
+     return
+   }
    var sunrise = new DateTime(Sunrise_Time.state.toString)
    var sunset = new DateTime(Sunset_Time.state.toString)
    // things should be cold around wakeup, neutral during the day, and warm during the night
@@ -50,11 +63,18 @@ then
    }
 end
 
-rule "daylight_colour_temp_weekend"
+rule "daylight_color_temp_weekend"
 when
     // recompute every 60 seconds
     Time cron "42 * * ? * SAT,SUN *"
 then
+   if (LightMode.state === NULL) {
+     LightMode.sendCommand("DAYLIGHT")
+   }
+   if (LightMode.state != "DAYLIGHT") {
+     return
+   }
+
    // weekend formular: wakeup is later and less cold
 
    var sunrise = new DateTime(Sunrise_Time.state.toString)

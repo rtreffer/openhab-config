@@ -1,2 +1,2 @@
-DateTime Sunrise_Time       "Sunrise [%1$tH:%1$tM]"                   { channel="astro:sun:home:rise#start" }
-DateTime Sunset_Time        "Sunset [%1$tH:%1$tM]"                    { channel="astro:sun:home:set#end" }
+DateTime Sunrise_Time       "Sonnenaufgang [%1$tH:%1$tM]" <sunrise> { channel="astro:sun:home:rise#start" }
+DateTime Sunset_Time        "Sonnenuntergang [%1$tH:%1$tM]"  <sunset>  { channel="astro:sun:home:set#end" }

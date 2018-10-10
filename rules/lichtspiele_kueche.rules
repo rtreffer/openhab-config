@@ -5,6 +5,10 @@ when
     // recompute every 60 seconds
     Time cron "47 * * ? * * *"
 then
+  if (LightMode.state != "DAY" && LightMode.state != "DAYLIGHT") {
+    return
+  }
+
   if ((Kueche_Color.state as PercentType).intValue <= 0) {
     return
   }

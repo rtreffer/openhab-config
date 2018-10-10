@@ -1,0 +1,25 @@
+rule "daylight_color_temp_guest"
+when
+    // recompute every 6 seconds (10x per minute)
+    Time cron "4/6 * * ? * * *"
+then
+  if (LightMode.state != "DAY" && LightMode.state != "DAYLIGHT") {
+    return
+  }
+
+  if ((Gaestezimmer_Fenster_Color.state as PercentType).intValue > 0) {
+    val current = (Gaestezimmer_Fenster_ColorTemperature.state as PercentType).intValue
+    val desired = (DaylightCT.state as PercentType).intValue
+    if (Math.abs(current - desired) >= 1) {
+      Gaestezimmer_Fenster_ColorTemperature.sendCommand(Math.round(0.9*current + 0.1*desired + Math.signum(desired - current)))
+    }
+  }
+
+  if ((Gaestezimmer_Couch_Color.state as PercentType).intValue > 0) {
+    val current = (Gaestezimmer_Couch_ColorTemperature.state as PercentType).intValue
+    val desired = (DaylightCT.state as PercentType).intValue
+    if (Math.abs(current - desired) >= 1) {
+      Gaestezimmer_Couch_ColorTemperature.sendCommand(Math.round(0.9*current + 0.1*desired + Math.signum(desired - current)))
+    }
+  }
+end

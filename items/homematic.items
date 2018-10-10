@@ -9,3 +9,9 @@ Switch RT_3_LONG "RT/Button3/Long" { channel="homematic:HM-RC-4-3:raspberrymatic
 Switch RT_4_LONG "RT/Button4/Long" { channel="homematic:HM-RC-4-3:raspberrymatic:OEQ0412558:3#PRESS_LONG" }
 
 Switch RT_AWAY "RT/Away" { channel="homematic:HM-RC-4-3:raspberrymatic:OEQ0412558:0#UNREACH" }
+
+
+Number Bad_Heiz_Temp <temperature> { channel="homematic:HmIP-eTRV-2:raspberrymatic:000A18A98AA093:1#ACTUAL_TEMPERATURE" }
+Number Bad_Heiz_SetTemp <temperature> { channel="homematic:HmIP-eTRV-2:raspberrymatic:000A18A98AA093:1#SET_POINT_TEMPERATURE" }
+String Bad_Heiz_ValveState { channel="homematic:HmIP-eTRV-2:raspberrymatic:000A18A98AA093:1#VALVE_STATE" }
+Dimmer Bad_Heiz_Level { channel="homematic:HmIP-eTRV-2:raspberrymatic:000A18A98AA093:1#LEVEL" }

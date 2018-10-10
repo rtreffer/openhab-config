@@ -1,0 +1,55 @@
+var Number saturation = 0.0
+var Number hue = 0
+var Number hueshift = 360 / 7
+val String filename="lichtspiele_colowheel"
+
+rule "colorwheel"
+when
+  Time cron "3/10 * * ? * * *"
+then
+  if (LightMode.state != "COLORWHEEL") {
+    logInfo(filename, "lightmode " + LightMode.state + " != \"COLORWHEEL\"")
+    saturation = 0.0
+    return
+  }
+
+  hue = (2.0 + hue) % 360
+  // wohnzimmer, +/-15°
+  val Number hue0 = (345.0 + hue) % 360
+  val Number hue1 = (15.0 + hue) % 360
+  // flur +90° +/-15°
+  val Number hue2 = (75.0 + hue) % 360
+  val Number hue3 = (105.0 + hue) % 360
+  // gästezimmer +180° +/-15°
+  val Number hue4 = (165.0 + hue) % 360
+  val Number hue5 = (195.0 + hue) % 360
+  // balkon +270°
+  val Number hue6 = (270.0 + hue) % 360
+
+  if (saturation < 100) {
+    saturation = saturation + 1 + (100 - saturation)/10
+  }
+  if (saturation > 100) {
+    saturation = 100
+  }
+
+  logInfo(filename, "colorwheel: hue=" + hue + ", saturation=" + saturation)
+
+  val s = "," + saturation + ",100"
+
+  val hsb0 = new HSBType(hue0 + s)
+  val hsb1 = new HSBType(hue1 + s)
+  val hsb2 = new HSBType(hue2 + s)
+  val hsb3 = new HSBType(hue3 + s)
+  val hsb4 = new HSBType(hue4 + s)
+  val hsb5 = new HSBType(hue5 + s)
+  val hsb6 = new HSBType(hue6 + s)
+
+  Wohnzimmer_Couch_Color.sendCommand(hsb0)
+  Wohnzimmer_Flur_Color.sendCommand(hsb1)
+  Flur_Wohnzimmer_Color.sendCommand(hsb2)
+  Flur_Gaestezimmer_Color.sendCommand(hsb3)
+  Gaestezimmer_Couch_Color.sendCommand(hsb4)
+  Gaestezimmer_Fenster_Color.sendCommand(hsb5)
+  Balkon_Color.sendCommand(hsb6)
+end
