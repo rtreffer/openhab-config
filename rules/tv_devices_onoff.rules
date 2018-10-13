@@ -81,7 +81,7 @@ then
     }
 
     if (powerWasOff) {
-        Thread::sleep(1000)
+        Thread::sleep(2000)
     }
 
     Harmony_Audio_ButtonPress.sendCommand("PowerToggle")
