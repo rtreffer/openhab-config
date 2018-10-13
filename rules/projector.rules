@@ -95,7 +95,7 @@ then
   if (DaylightCT == NULL) {
     return
   }
-  if (DaylightCT > 55) {
+  if (DaylightCT.state.intValue > 55) {
     Projector_ColorTemp.sendCommand("WARM")
   } else {
     Projector_ColorTemp.sendCommand("NORMAL")
