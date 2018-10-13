@@ -1,5 +1,6 @@
 val String filename = "projector.rules"
 var Number smoothedLight = 0
+var Number lastState = 0
 
 rule "projector_picture_settings"
 when
@@ -90,14 +91,21 @@ end
 
 rule "projector_picture_temp_on"
 when
-  Item Projector_Power changed from OFF to ON
+  Item Projector_Power changed
 then
   if (DaylightCT == NULL) {
     return
   }
-  if (DaylightCT.state.intValue > 55) {
-    Projector_ColorTemp.sendCommand("WARM")
-  } else {
-    Projector_ColorTemp.sendCommand("NORMAL")
+  if ((Projector_Power.state as OnOffType) == OFF) {
+    lastState = -1
+    return
+  }
+  if (lastState != 1) {
+    if (DaylightCT.state.intValue > 55) {
+      Projector_ColorTemp.sendCommand("WARM")
+    } else {
+      Projector_ColorTemp.sendCommand("NORMAL")
+    }
+    lastState = 1
   }
 end
