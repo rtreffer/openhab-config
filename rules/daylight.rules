@@ -27,7 +27,10 @@ then
 
    var now = new DateTime()
 
+   var mnight = new DateTime().withTime(23, 59, 59, 999)
+
    val night = 0.8
+   val evening = 0.65
    val day = 0.5
    val wakeup = 0.3
 
@@ -49,13 +52,15 @@ then
        // post-sunrise to pre-sunset (day): 0.5 (neutral)
        w = day
    } else if (now.isBefore(sunset)) {
-       // pre-sunset to sunset: 0.5 -> 0.8
+       // pre-sunset to sunset: 0.5 -> 0.65
        var dt = 1.0*(sunset.millis - preSunset.millis)
        var p = now.millis - preSunset.millis
-       w = (1-p/dt)*day + (p/dt)*night
+       w = (1-p/dt)*day + (p/dt)*evening
    } else {
-       // after sunset: 0.8
-       w = night
+       // after sunset: 0.65 -> 0.8
+       var dt = 1.0*(mnight.millis - sunset.millis)
+       var p = now.millis - sunset.millis
+       w = (1-p/dt)*evening + (p/dt)*night
    }
 
    if (DaylightCT.state == NULL || (DaylightCT.state as PercentType).intValue != Math.round(w * 100)) {
@@ -85,7 +90,10 @@ then
 
    var now = new DateTime()
 
+   var mnight = new DateTime().withTime(23, 59, 59, 999)
+
    val night = 0.8
+   val evening = 0.65
    val day = 0.5
    val wakeup = 0.4
 
@@ -107,13 +115,15 @@ then
        // post-sunrise to pre-sunset (day): 0.5 (neutral)
        w = day
    } else if (now.isBefore(sunset)) {
-       // pre-sunset to sunset: 0.5 -> 0.8
+       // pre-sunset to sunset: 0.5 -> 0.65
        var dt = 1.0*(sunset.millis - preSunset.millis)
        var p = now.millis - preSunset.millis
-       w = (1-p/dt)*day + (p/dt)*night
+       w = (1-p/dt)*day + (p/dt)*evening
    } else {
-       // after sunset: 0.8
-       w = night
+       // after sunset: 0.65 -> 0.8
+       var dt = 1.0*(mnight.millis - sunset.millis)
+       var p = now.millis - sunset.millis
+       w = (1-p/dt)*evening + (p/dt)*night
    }
 
    if (DaylightCT.state == NULL || (DaylightCT.state as PercentType).intValue != Math.round(w * 100)) {
