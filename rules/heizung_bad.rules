@@ -1,0 +1,26 @@
+val filename = "heizung_bad"
+
+rule "handtuchwaermer"
+when
+    Time cron "8 * 4-10 ? * * *"
+then
+    val lastMotion = (LastFlurMotionTime.state as DateTimeType).getCalendar.getTimeInMillis
+    var lastBoost = 0
+    if (BathTowelBoostTime.state != NULL) {
+      lastBoost = (BathTowelBoostTime.state as DateTimeType).getCalendar.getTimeInMillis
+    }
+
+    val delta = now.millis-lastMotion
+    val boostDelta = lastMotion-lastBoost
+    logInfo(filename, "delta(ms)=" + delta + ",boostDelta(ms)=" + boostDelta)
+
+    // if the last boost is more than 12h ago (~43200000ms)
+    // and
+    // if there was a motion detected in the last 5 minutes (~300000ms)
+    if (delta < 300000 && boostDelta > 43200000) {
+      // then set the radiator to "Boost"
+      Bad_Heiz_Boost.send(ON)
+      BathTowelBoostTime.sendCommand(LastFlurMotionTime.state)
+    }
+end
+

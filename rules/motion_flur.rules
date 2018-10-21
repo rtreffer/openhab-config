@@ -1,0 +1,13 @@
+rule "flur1_motion_update"
+when
+    Item Motion_Flur1_Occupancy changed to ON
+then
+    LastFlurMotionTime.sendCommand(new DateTimeType())
+end
+
+rule "flur2_motion_update"
+when
+    Item Motion_Flur2_Occupancy changed to ON
+then
+    LastFlurMotionTime.sendCommand(new DateTimeType())
+end
