@@ -7,6 +7,16 @@ then
   DaylightCT.sendCommand(50)
 end
 
+rule "day_color_recheck"
+when
+  Time cron "43 2/5 * ? * * *"
+then
+  if (LightMode.state != "DAY") {
+    return
+  }
+  DaylightCT.sendCommand(50)
+end
+
 rule "daylight_color_temp"
 when
     // recompute every 60 seconds

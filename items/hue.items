@@ -34,8 +34,9 @@ Dimmer   Kueche_Spots_Brightness   "Küche Spots Brightness"    {channel="hue:01
 Color    Balkon_Color              "Balkon Color"              {channel="hue:0210:living:balkon:color"}
 
 // Lights Toilette
-Dimmer   Toilette_ColorTemperature   "Toilette Color Temperature"   {channel="hue:0220:living:toilette:color_temperature"}
-Dimmer   Toilette_Brightness         "Toilette Brightness"          {channel="hue:0220:living:toilette:brightness"}
+Dimmer   Toilette_Color              "Toilette Color"               {channel="hue:0210:living:toilette:color_temperature"}
+Dimmer   Toilette_ColorTemperature   "Toilette Color Temperature"   {channel="hue:0210:living:toilette:color_temperature"}
+Dimmer   Toilette_Brightness         "Toilette Brightness"          {channel="hue:0210:living:toilette:brightness"}
 
 // Lights Schlafzimmer
 Dimmer   Schlafzimmer_ColorTemperature   "Schlafzimmer Color Temperature"   {channel="hue:0220:living:schlafzimmer:color_temperature"}

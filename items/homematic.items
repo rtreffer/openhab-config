@@ -14,4 +14,7 @@ Switch RT_AWAY "RT/Away" { channel="homematic:HM-RC-4-3:raspberrymatic:OEQ041255
 Number Bad_Heiz_Temp <temperature> { channel="homematic:HmIP-eTRV-2:raspberrymatic:000A18A98AA093:1#ACTUAL_TEMPERATURE" }
 Number Bad_Heiz_SetTemp <temperature> { channel="homematic:HmIP-eTRV-2:raspberrymatic:000A18A98AA093:1#SET_POINT_TEMPERATURE" }
 String Bad_Heiz_ValveState { channel="homematic:HmIP-eTRV-2:raspberrymatic:000A18A98AA093:1#VALVE_STATE" }
-Dimmer Bad_Heiz_Level { channel="homematic:HmIP-eTRV-2:raspberrymatic:000A18A98AA093:1#LEVEL" }
+Dimmer Bad_Heiz_Level      { channel="homematic:HmIP-eTRV-2:raspberrymatic:000A18A98AA093:1#LEVEL" }
+Switch Bad_Heiz_Boost      { channel="homematic:HmIP-eTRV-2:raspberrymatic:000A18A98AA093:1#BOOST_MODE" }
+Number Bad_Heiz_BoostTime  { channel="homematic:HmIP-eTRV-2:raspberrymatic:000A18A98AA093:1#BOOST_TIME" }
+

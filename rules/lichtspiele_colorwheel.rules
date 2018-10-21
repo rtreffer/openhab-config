@@ -8,7 +8,6 @@ when
   Time cron "3/10 * * ? * * *"
 then
   if (LightMode.state != "COLORWHEEL") {
-    logInfo(filename, "lightmode " + LightMode.state + " != \"COLORWHEEL\"")
     saturation = 0.0
     return
   }

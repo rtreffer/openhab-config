@@ -2,3 +2,4 @@ ON=anwesend
 OFF=abwesend
 1=anwesend
 0=abwesend
+-=?
