@@ -4,14 +4,14 @@ rule "handtuchwaermer"
 when
     Time cron "8 * 4-10 ? * * *"
 then
-    val lastMotion = (LastFlurMotionTime.state as DateTimeType).getCalendar.getTimeInMillis
-    var lastBoost = 0
+    val Number lastMotion = (LastFlurMotionTime.state as DateTimeType).getCalendar.getTimeInMillis
+    var Number lastBoost = 0
     if (BathTowelBoostTime.state != NULL) {
       lastBoost = (BathTowelBoostTime.state as DateTimeType).getCalendar.getTimeInMillis
     }
 
-    val delta = now.millis-lastMotion
-    val boostDelta = lastMotion-lastBoost
+    val Number delta = now.millis-lastMotion
+    val Number boostDelta = lastMotion-lastBoost
     logInfo(filename, "delta(ms)=" + delta + ",boostDelta(ms)=" + boostDelta)
 
     // if the last boost is more than 12h ago (~43200000ms)
@@ -20,7 +20,7 @@ then
     if (delta < 300000 && boostDelta > 43200000) {
       // then set the radiator to "Boost"
       Bad_Heiz_Boost.send(ON)
-      BathTowelBoostTime.sendCommand(LastFlurMotionTime.state)
+      BathTowelBoostTime.send(LastFlurMotionTime.state)
     }
 end
 
