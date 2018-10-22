@@ -1,0 +1,10 @@
+sitemap wohnung label="Wohnung" {
+  Frame label="Umgebung" {
+    Text item=Sunrise_Time
+    Text item=Sunset_Time
+  }
+  Frame label="Licht" {
+    Switch item=LightMode  label="Lichtmodus" mappings=[MANUAL="Manuell",DAY="Taghell",DAYLIGHT="Zeitbasiert",COLORWHEEL="Lichtrad"]
+    Text item=DaylightCT label="Farbtemperatur: kalt(0) bis warm(100) [%.0f]"
+  }
+}

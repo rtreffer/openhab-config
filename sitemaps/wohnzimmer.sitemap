@@ -1,0 +1,13 @@
+sitemap wohnzimmer label="Wohnzimmer" {
+  Frame label="Raum" {
+    Text item=Motion_Wohnzimmer_Temperature label="Temperatur (IST) [%.1f °C]"
+    Text item=Motion_Wohnzimmer_Illuminance label="Helligkeit [%.0f]"
+    Text item=Motion_Wohnzimmer_Occupancy   label="Anwesenheit [MAP(occupancy.map):%s]"
+  }
+  Frame label="Beamer" {
+    Switch item=Projector_Power      label="Power"
+    Slider item=Projector_Brightness label="Helligkeit [%.1f]"
+    Slider item=Projector_Contrast   label="Kontrast [%.1f]"
+    Switch item=Projector_ColorTemp  label="Farbtemperatur" mappings=[COLD="kalt",NORMAL="neutral",WARM="warm"]
+  }
+}
