@@ -67,7 +67,7 @@ then
     }
   }
 
-  if (Projector_Contrast.state !== NULL) {
+  if (Projector_Contrast.state !== NULL && Projector_Contrast.state !== UNDEF) {
     val Number cc = (Projector_Contrast.state as DecimalType).intValue
     if (cc !== NULL && cc != c) {
       logInfo(filename, "desired contrast: " + c + ", current contrast: " + cc)

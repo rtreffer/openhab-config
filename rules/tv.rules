@@ -1,43 +1,59 @@
 val filename="tv"
 
-var tv_on = 0
-var tv_off = 30
-
-rule "tv_on"
+rule "tv_turned_on"
 when
-    // recompute every 10 seconds
-    Time cron "5/10 * * ? * * *"
+    Item Projector_Power changed to ON
+then
+    TVisON.send(ON)
+end
+
+rule "tv_turned_off"
+when
+    Item Projector_Power changed to OFF
+then
+    TVisON.send(OFF)
+end
+
+rule "tv_sync"
+when
+    Time cron "12 * * ? * * *"
+then
+   if (WiFi_Switch_TV_D_power.state !== NULL) {
+       val Number power = (WiFi_Switch_TV_D_power.state as Number).intValue
+       if (power > 200) {
+           LastTvON.sendCommand(now)
+       }
+   }
+   if (Projector_Power.state == ON && TVisON != ON) {
+     TVisON.sendCommand(ON)
+   }
+   if (Projector_Power.state == OFF && TVisON != OFF) {
+     TVisON.sendCommand(OFF)
+   }
+end
+
+rule "turn_tv_on"
+when
+    Item WiFi_Switch_TV_D_power changed
 then
     if (WiFi_Switch_TV_D_power.state == NULL) {
         return
     }
-    val power = (WiFi_Switch_TV_D_power.state as Number).intValue
-    val nostate = TVisON.state == NULL
-    val on = (!nostate) && ((TVisON.state as OnOffType) == ON)
 
-    if (power < 10) {
-        tv_off += 10
-        tv_on = 0
-        if (on || nostate) {
-            TVisON.sendCommand(OFF)
-        }
-        return
+    val Number power = (WiFi_Switch_TV_D_power.state as Number).intValue
+    var Number lastOff = 0
+    if (LastTvON.state != NULL) {
+      lastOff = (LastTvON.state as DateTimeType).getCalendar.getTimeInMillis
     }
+    val Number delta = now.millis-lastOff
 
-    if (power >= 30 && power <= 40 && tv_off >= 30) {
+    if (power >= 30 && TVisON != ON && delta > 600000) {
         Harmony_Beamer_ButtonPress.sendCommand("PowerOn")
-        TVisON.sendCommand(ON)
-        tv_on = 10
-        tv_off = 0
-        return
+        TVisON.send(ON)
+        Projector_Power.send(ON)
     }
 
-    if (power > 200) {
-        tv_off = 0
-        tv_on += 10
-        if (nostate || !on) {
-            TVisON.sendCommand(ON)
-        }
+    if (power < 10 && TVisON.state != OFF) {
+        TVisON.send(OFF)
     }
-
 end

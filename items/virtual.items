@@ -6,6 +6,7 @@ String LightMode "Lichtermodus" <colorlight>
 
 // Switch to act on TV state (on/off)
 Switch TVisON "tv is on"
+DateTime LastTvON "last time the TV was ON"
 
 DateTime LastFlurMotionTime "last motion time flur"
-DateTime BathTowelBoostTime      "last bathroom towel boost time"
+DateTime BathTowelBoostTime "last bathroom towel boost time"

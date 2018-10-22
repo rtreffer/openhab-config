@@ -5,5 +5,4 @@ tplinksmarthome:hs110:outdoor  "Outdoor"     [ ipAddress="192.168.2.34", refresh
 tplinksmarthome:hs110:fridge   "Kühlschrank" [ ipAddress="192.168.2.35", refresh=60 ]
 tplinksmarthome:hs110:print3d  "3D printing" [ ipAddress="192.168.2.36", refresh=60 ]
 tplinksmarthome:hs110:tvc      "TV Feed C"   [ ipAddress="192.168.2.37", refresh=60 ]
-// Feed D is projector + screen and thus indicative for the projector
-tplinksmarthome:hs110:tvd      "TV Feed D"   [ ipAddress="192.168.2.38", refresh=10 ]
+tplinksmarthome:hs110:tvd      "TV Feed D"   [ ipAddress="192.168.2.38", refresh=60 ]
