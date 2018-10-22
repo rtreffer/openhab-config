@@ -1,0 +1,8 @@
+sitemap bad label="Bad" {
+  Frame label="Heizung" {
+    Text item=Bad_Heiz_Temp label="Heizkörper (IST) [%.1f °C]"
+    Setpoint item=Bad_Heiz_SetTemp label="Heizkörper [%.1f °C]" minValue=10 maxValue=30 step=0.1
+    Switch item=Bad_Heiz_Boost label="Heizkörper BOOST"
+    Text item=Bad_Heiz_BoostTime label="Boost Timer [%d s]"
+  }
+}
