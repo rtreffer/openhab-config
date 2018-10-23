@@ -4,14 +4,18 @@ rule "tv_turned_on"
 when
     Item Projector_Power changed to ON
 then
-    TVisON.send(ON)
+    if (TVisON.state != ON) {
+      TVisON.send(ON)
+    }
 end
 
 rule "tv_turned_off"
 when
     Item Projector_Power changed to OFF
 then
-    TVisON.send(OFF)
+    if (TVisON.state != OFF) {
+      TVisON.send(OFF)
+    }
 end
 
 rule "tv_sync"

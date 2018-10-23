@@ -5,6 +5,15 @@ then
     LastFlurMotionTime.sendCommand(new DateTimeType())
 end
 
+rule "flur_sync"
+when
+    Time cron "59 * * ? * * *"
+then
+    if (Motion_Flur1_Occupancy == ON || Motion_Flur2_Occupancy == ON) {
+      LastFlurMotionTime.sendCommand(new DateTimeType())
+    }
+end
+
 rule "flur2_motion_update"
 when
     Item Motion_Flur2_Occupancy changed to ON
