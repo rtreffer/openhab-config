@@ -14,8 +14,8 @@
         return "";
       }
     }
-    if (json.hasOwnProperty('occupancy')) {
-      if (json.occupancy) {
+    if (json.hasOwnProperty('contact')) {
+      if (json.contact) {
         result="ON";
       } else {
         result="OFF";
