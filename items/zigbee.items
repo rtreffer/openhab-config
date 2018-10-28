@@ -6,3 +6,5 @@ Number Motion_Wohnzimmer_Battery "Wohnzimmer/Battery" <battery> {mqtt="<[broker:
 
 Switch Motion_Flur1_Occupancy "Flur1/Anwesenheit" <motion> {mqtt="<[broker:zigbee/motion_flur1:state:JS(getZigbeeOccupancy.js)]" }
 Switch Motion_Flur2_Occupancy "Flur2/Anwesenheit" <motion> {mqtt="<[broker:zigbee/motion_flur2:state:JS(getZigbeeOccupancy.js)]" }
+
+Switch Windows_Screen_Closed "Leinwand Oben" <window> {mqtt="<[broker:zigbee/window_screen:state:JS(getZigbeeWindowStatus.js)]" }

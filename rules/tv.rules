@@ -18,6 +18,28 @@ then
     }
 end
 
+rule "tv_screen_closed"
+when
+    Item Windows_Screen_Closed changed to ON
+then
+    if (TVisON.state != OFF) {
+      TVisON.send(OFF)
+      Projector_Power.send(OFF)
+      Harmony_Beamer_ButtonPress.sendCommand("PowerOff")
+    }
+end
+
+rule "tv_screen_opened"
+when
+    Item Windows_Screen_Closed changed to OFF
+then
+    if (TVisON.state != ON) {
+        Harmony_Beamer_ButtonPress.sendCommand("PowerOn")
+        TVisON.send(ON)
+        Projector_Power.send(ON)
+    }
+end
+
 rule "tv_sync"
 when
     Time cron "12 * * ? * * *"
