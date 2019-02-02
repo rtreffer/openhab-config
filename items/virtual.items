@@ -10,3 +10,9 @@ DateTime LastTvON "last time the TV was ON"
 
 DateTime LastFlurMotionTime "last motion time flur"
 DateTime BathTowelBoostTime "last bathroom towel boost time"
+
+Switch WorkLamp1 "Arbeitsmodus Lampe 1"
+Switch WorkLamp2 "Arbeitsmodus Lampe 2"
+Switch WorkLamp3 "Arbeitsmodus Lampe 3"
+Switch WorkLamp4 "Arbeitsmodus Lampe 4"
+Switch WorkLamp5 "Arbeitsmodus Lampe 5"
