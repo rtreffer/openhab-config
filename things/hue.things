@@ -11,13 +11,17 @@ Bridge hue:bridge:living [ ipAddress="192.168.2.30", userName="HCpV8HdHFkmOAz6pk
 
     0210 balkon               [ lightId="21" ]
 
-    0100 max_tuer             [ lightId="8"  ]
-    0100 max_fenster          [ lightId="9"  ]
+    0100 max_tuer_old         [ lightId="8"  ]
+    0100 max_fenster_old      [ lightId="9"  ]
+
+    0210 max_tuer             [ lightId="27" ]
+    0210 max_fenster          [ lightId="26" ]
 
     0210 toilette             [ lightId="24" ]
     0220 toilette_old         [ lightId="11" ]
 
-    0220 schlafzimmer         [ lightId="12" ]
+    0210 schlafzimmer         [ lightId="25" ]
+    0220 schlafzimmer_old     [ lightId="12" ]
     0200 schlafzimmer_bloom   [ lightId="2"  ]
 
     0210 gaestezimmer_fenster [ lightId="5"  ]
@@ -29,6 +33,6 @@ Bridge hue:bridge:living [ ipAddress="192.168.2.30", userName="HCpV8HdHFkmOAz6pk
     0210 wohnzimmer_couch     [ lightId="15" ]
     0210 wohnzimmer_flur      [ lightId="16" ]
 
-    0210 nische               [ lightId="20" ]
+    0220 nische               [ lightId="20" ]
     0200 kueche_old           [ lightId="22" ]
 }

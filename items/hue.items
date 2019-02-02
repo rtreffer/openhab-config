@@ -1,6 +1,5 @@
 // Special items
 Switch   FireTV_OnOff_Switch          "FireTV ON/OFF"          {channel="hue:0000:living:firetv_switch:switch"}
-Switch   Nintendo_Switch_OnOff_Switch "Nintendo Switch ON/OFF" {channel="hue:0000:living:nintendo_switch:switch"}
 
 // Lights Wohnzimmer
 Color    Wohnzimmer_Flur_Color              "Wohnzimmer / Flur Color"               {channel="hue:0210:living:wohnzimmer_flur:color"}
@@ -22,24 +21,25 @@ Color   Gaestezimmer_Couch_Color              "Gästezimmer / Couch Color"      
 Dimmer  Gaestezimmer_Couch_ColorTemperature   "Gästezimmer / Couch ColorTemperature"   {channel="hue:0210:living:gaestezimmer_couch:color_temperature"}
 
 // Lights Max
-Dimmer   Max_Fenster_Brightness   "Max / Fenster Brightness"   {channel="hue:0100:living:max_fenster:brightness"}
-Dimmer   Max_Tuer_Brightness      "Max / Tür Brightness"       {channel="hue:0100:living:max_tuer:brightness"}
+Color   Max_Fenster_Color             "Max / Fenster Color"              {channel="hue:0210:living:max_fenster:color"}
+Dimmer  Max_Fenster_ColorTemperature  "Max / Fenster ColorTemperature"   {channel="hue:0210:living:max_fenster:color_temperature"}
+Color   Max_Tuer_Color                "Max / Tür Color"                  {channel="hue:0210:living:max_tuer:color"}
+Dimmer  Max_Tuer_ColorTemperature     "Max / Tür ColorTemperature"       {channel="hue:0210:living:max_tuer:color_temperature"}
 
 // Lights Küche
 Color    Kueche_Color              "Küche Color"               {channel="hue:0210:living:kueche:color"}
 Dimmer   Kueche_ColorTemperature   "Küche Color Temperature"   {channel="hue:0210:living:kueche:color_temperature"}
-Dimmer   Kueche_Spots_Brightness   "Küche Spots Brightness"    {channel="hue:0100:living:kueche_spots:brightness"}
 
 // Light Balkon
 Color    Balkon_Color              "Balkon Color"              {channel="hue:0210:living:balkon:color"}
+Dimmer   Balkon_ColorTemperature   "Balkon Color Temperature"  {channel="hue:0210:living:balkon:color_temperature"}
 
 // Lights Toilette
-Dimmer   Toilette_Color              "Toilette Color"               {channel="hue:0210:living:toilette:color_temperature"}
+Color    Toilette_Color              "Toilette Color"               {channel="hue:0210:living:toilette:color"}
 Dimmer   Toilette_ColorTemperature   "Toilette Color Temperature"   {channel="hue:0210:living:toilette:color_temperature"}
-Dimmer   Toilette_Brightness         "Toilette Brightness"          {channel="hue:0210:living:toilette:brightness"}
 
 // Lights Schlafzimmer
-Dimmer   Schlafzimmer_ColorTemperature   "Schlafzimmer Color Temperature"   {channel="hue:0220:living:schlafzimmer:color_temperature"}
-Dimmer   Schlafzimmer_Brightness         "Schlafzimmer Brightness"          {channel="hue:0220:living:schlafzimmer:brightness"}
+Color    Schlafzimmer_Color              "Schlafzimmer Color"               {channel="hue:0210:living:schlafzimmer:color"}
+Dimmer   Schlafzimmer_ColorTemperature   "Schlafzimmer Color Temperature"   {channel="hue:0210:living:schlafzimmer:color_temperature"}
 
 Color    Schlafzimmer_Bloom_Color   "Schlafzimmer Bloom Color"       {channel="hue:0200:living:schlafzimmer_bloom:color"}
