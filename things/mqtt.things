@@ -1,0 +1,1 @@
+Bridge mqtt:broker:local [ host="192.168.2.26", secure=false ]
