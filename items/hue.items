@@ -5,8 +5,16 @@ Switch   FireTV_OnOff_Switch          "FireTV ON/OFF"          {channel="hue:000
 Color    Wohnzimmer_Flur_Color              "Wohnzimmer / Flur Color"               {channel="hue:0210:living:wohnzimmer_flur:color"}
 Dimmer   Wohnzimmer_Flur_ColorTemperature   "Wohnzimmer / Flur ColorTemperature"    {channel="hue:0210:living:wohnzimmer_flur:color_temperature"}
 
-Color    Wohnzimmer_Couch_Color              "Wohnzimmer / Couch Color"               {channel="hue:0210:living:wohnzimmer_couch:color"}
-Dimmer   Wohnzimmer_Couch_ColorTemperature   "Wohnzimmer / Couch ColorTemperatur"     {channel="hue:0210:living:wohnzimmer_couch:color_temperature"}
+Color    Wohnzimmer_Lamp1_Color              "Wohnzimmer / Tischlampe 1 Color"               {channel="hue:0210:living:wohnzimmer_lamp1:color"}
+Dimmer   Wohnzimmer_Lamp1_ColorTemperature   "Wohnzimmer / Tischlampe 1 ColorTemperatur"     {channel="hue:0210:living:wohnzimmer_lamp1:color_temperature"}
+Color    Wohnzimmer_Lamp2_Color              "Wohnzimmer / Tischlampe 2 Color"               {channel="hue:0210:living:wohnzimmer_lamp2:color"}
+Dimmer   Wohnzimmer_Lamp2_ColorTemperature   "Wohnzimmer / Tischlampe 2 ColorTemperatur"     {channel="hue:0210:living:wohnzimmer_lamp2:color_temperature"}
+Color    Wohnzimmer_Lamp3_Color              "Wohnzimmer / Tischlampe 3 Color"               {channel="hue:0210:living:wohnzimmer_lamp3:color"}
+Dimmer   Wohnzimmer_Lamp3_ColorTemperature   "Wohnzimmer / Tischlampe 3 ColorTemperatur"     {channel="hue:0210:living:wohnzimmer_lamp3:color_temperature"}
+Color    Wohnzimmer_Lamp4_Color              "Wohnzimmer / Tischlampe 4 Color"               {channel="hue:0210:living:wohnzimmer_lamp4:color"}
+Dimmer   Wohnzimmer_Lamp4_ColorTemperature   "Wohnzimmer / Tischlampe 4 ColorTemperatur"     {channel="hue:0210:living:wohnzimmer_lamp4:color_temperature"}
+Color    Wohnzimmer_Lamp5_Color              "Wohnzimmer / Tischlampe 5 Color"               {channel="hue:0210:living:wohnzimmer_lamp5:color"}
+Dimmer   Wohnzimmer_Lamp5_ColorTemperature   "Wohnzimmer / Tischlampe 5 ColorTemperatur"     {channel="hue:0210:living:wohnzimmer_lamp5:color_temperature"}
 
 // Light Flur
 Color    Flur_Wohnzimmer_Color              "Flur / Wohnzimmer Color"               {channel="hue:0210:living:flur_wohnzimmer:color"}
