@@ -73,7 +73,7 @@ then
     }
     val Number delta = now.millis-lastOff
 
-    if (power >= 30 && TVisON != ON && delta > 600000) {
+    if (power >= 30 && TVisON.state != ON && delta > 600000) {
         Harmony_Beamer_ButtonPress.sendCommand("PowerOn")
         TVisON.send(ON)
         Projector_Power.send(ON)
