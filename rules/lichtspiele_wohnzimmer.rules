@@ -22,11 +22,11 @@ then
   var lamp5_ctemp = ctemp
   if (tvon) {
     brightness = 30
-    lamp1=30
-    lamp2=30
-    lamp3=30
-    lamp4=30
-    lamp5=30
+    lamp1=20
+    lamp2=20
+    lamp3=20
+    lamp4=20
+    lamp5=20
   }
   if (WorkLamp1.state == ON) {
     lamp1 = 100
