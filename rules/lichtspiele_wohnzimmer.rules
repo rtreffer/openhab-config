@@ -9,22 +9,105 @@ then
 
   val tvon = (TVisON.state !== NULL) && ((TVisON.state as OnOffType) == ON)
   var brightness = 100
+  var lamp1 = 75
+  var lamp2 = 75
+  var lamp3 = 75
+  var lamp4 = 75
+  var lamp5 = 75
   if (tvon) {
     brightness = 30
+    lamp1=30
+    lamp2=30
+    lamp3=30
+    lamp4=30
+    lamp5=30
+  }
+  if (WorkLamp1.state == ON) {
+    lamp1 = 100
+  }
+  if (WorkLamp2.state == ON) {
+    lamp2 = 100
+  }
+  if (WorkLamp3.state == ON) {
+    lamp3 = 100
+  }
+  if (WorkLamp4.state == ON) {
+    lamp4 = 100
+  }
+  if (WorkLamp5.state == ON) {
+    lamp5 = 100
   }
 
-  if ((Wohnzimmer_Couch_Color.state as PercentType).intValue > 0) {
-    val current = (Wohnzimmer_Couch_ColorTemperature.state as PercentType).intValue
+  if ((Wohnzimmer_Lamp1_Color.state as PercentType).intValue > 0) {
+    
+    val current = (Wohnzimmer_Lamp1_ColorTemperature.state as PercentType).intValue
     val desired = (DaylightCT.state as PercentType).intValue
     if (Math.abs(current - desired) >= 1) {
-      Wohnzimmer_Couch_ColorTemperature.sendCommand(Math.round(current + Math.signum(desired - current)))
+      Wohnzimmer_Lamp1_ColorTemperature.sendCommand(Math.round(current + Math.signum(desired - current)))
     }
 
-    val currentBrightness = (Wohnzimmer_Couch_Color.state as HSBType).brightness.intValue
-    if (Math.abs(currentBrightness - brightness) >= 1) {
-      Wohnzimmer_Couch_Color.sendCommand(Math.round(0.9*currentBrightness + 0.1*brightness + Math.signum(brightness - currentBrightness)))
+    val currentBrightness = (Wohnzimmer_Lamp1_Color.state as HSBType).brightness.intValue
+    if (Math.abs(currentBrightness - lamp1) >= 1) {
+      Wohnzimmer_Lamp1_Color.sendCommand(Math.round(0.9*currentBrightness + 0.1*lamp1 + Math.signum(lamp1 - currentBrightness)))
     }
   }
+
+  if ((Wohnzimmer_Lamp2_Color.state as PercentType).intValue > 0) {
+    
+    val current = (Wohnzimmer_Lamp2_ColorTemperature.state as PercentType).intValue
+    val desired = (DaylightCT.state as PercentType).intValue
+    if (Math.abs(current - desired) >= 1) {
+      Wohnzimmer_Lamp2_ColorTemperature.sendCommand(Math.round(current + Math.signum(desired - current)))
+    }
+
+    val currentBrightness = (Wohnzimmer_Lamp2_Color.state as HSBType).brightness.intValue
+    if (Math.abs(currentBrightness - lamp2) >= 1) {
+      Wohnzimmer_Lamp2_Color.sendCommand(Math.round(0.9*currentBrightness + 0.1*lamp2 + Math.signum(lamp2 - currentBrightness)))
+    }
+  }
+
+  if ((Wohnzimmer_Lamp3_Color.state as PercentType).intValue > 0) {
+    
+    val current = (Wohnzimmer_Lamp3_ColorTemperature.state as PercentType).intValue
+    val desired = (DaylightCT.state as PercentType).intValue
+    if (Math.abs(current - desired) >= 1) {
+      Wohnzimmer_Lamp3_ColorTemperature.sendCommand(Math.round(current + Math.signum(desired - current)))
+    }
+
+    val currentBrightness = (Wohnzimmer_Lamp3_Color.state as HSBType).brightness.intValue
+    if (Math.abs(currentBrightness - lamp3) >= 1) {
+      Wohnzimmer_Lamp3_Color.sendCommand(Math.round(0.9*currentBrightness + 0.1*lamp3 + Math.signum(lamp3 - currentBrightness)))
+    }
+  }
+
+  if ((Wohnzimmer_Lamp4_Color.state as PercentType).intValue > 0) {
+    
+    val current = (Wohnzimmer_Lamp4_ColorTemperature.state as PercentType).intValue
+    val desired = (DaylightCT.state as PercentType).intValue
+    if (Math.abs(current - desired) >= 1) {
+      Wohnzimmer_Lamp4_ColorTemperature.sendCommand(Math.round(current + Math.signum(desired - current)))
+    }
+
+    val currentBrightness = (Wohnzimmer_Lamp4_Color.state as HSBType).brightness.intValue
+    if (Math.abs(currentBrightness - lamp4) >= 1) {
+      Wohnzimmer_Lamp4_Color.sendCommand(Math.round(0.9*currentBrightness + 0.1*lamp4 + Math.signum(lamp4 - currentBrightness)))
+    }
+  }
+
+  if ((Wohnzimmer_Lamp5_Color.state as PercentType).intValue > 0) {
+    
+    val current = (Wohnzimmer_Lamp5_ColorTemperature.state as PercentType).intValue
+    val desired = (DaylightCT.state as PercentType).intValue
+    if (Math.abs(current - desired) >= 1) {
+      Wohnzimmer_Lamp5_ColorTemperature.sendCommand(Math.round(current + Math.signum(desired - current)))
+    }
+
+    val currentBrightness = (Wohnzimmer_Lamp5_Color.state as HSBType).brightness.intValue
+    if (Math.abs(currentBrightness - lamp5) >= 1) {
+      Wohnzimmer_Lamp5_Color.sendCommand(Math.round(0.9*currentBrightness + 0.1*lamp5 + Math.signum(lamp5 - currentBrightness)))
+    }
+  }
+
   if ((Wohnzimmer_Flur_Color.state as PercentType).intValue > 0) {
     val current = (Wohnzimmer_Flur_ColorTemperature.state as PercentType).intValue
     val desired = (DaylightCT.state as PercentType).intValue

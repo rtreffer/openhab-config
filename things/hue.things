@@ -23,9 +23,9 @@ Bridge hue:bridge:living [ ipAddress="192.168.2.30", userName="HCpV8HdHFkmOAz6pk
 
     0210 wohnzimmer_couch     [ lightId="15" ]
 
-    0210 wohnzimmer_lampe1    [ lightId="33" ]
-    0210 wohnzimmer_lampe2    [ lightId="32" ]
-    0210 wohnzimmer_lampe3    [ lightId="23" ]
-    0210 wohnzimmer_lampe4    [ lightId="31" ]
-    0210 wohnzimmer_lampe5    [ lightId="34" ]
+    0210 wohnzimmer_lamp1     [ lightId="33" ]
+    0210 wohnzimmer_lamp2     [ lightId="32" ]
+    0210 wohnzimmer_lamp3     [ lightId="23" ]
+    0210 wohnzimmer_lamp4     [ lightId="31" ]
+    0210 wohnzimmer_lamp5     [ lightId="34" ]
 }

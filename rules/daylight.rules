@@ -9,7 +9,7 @@ end
 
 rule "day_color_recheck"
 when
-  Time cron "43 2/5 * ? * * *"
+  Time cron "43 2/5 * ? * *"
 then
   if (LightMode.state != "DAY") {
     return
@@ -20,10 +20,11 @@ end
 rule "daylight_color_temp"
 when
     // recompute every 60 seconds
-    Time cron "42 * * ? * MON-FRI *"
+    Time cron "42 * * ? * MON-FRI" or
+    System started
 then
-   if (LightMode.state === NULL) {
-     LightMode.sendCommand("DAYLIGHT")
+   if (LightMode.state == NULL) {
+     LightMode.postUpdate("DAYLIGHT")
    }
    if (LightMode.state != "DAYLIGHT") {
      return
@@ -81,10 +82,10 @@ end
 rule "daylight_color_temp_weekend"
 when
     // recompute every 60 seconds
-    Time cron "42 * * ? * SAT,SUN *"
+    Time cron "42 * * ? * SAT,SUN"
 then
-   if (LightMode.state === NULL) {
-     LightMode.sendCommand("DAYLIGHT")
+   if (LightMode.state == NULL) {
+     LightMode.postUpdate("DAYLIGHT")
    }
    if (LightMode.state != "DAYLIGHT") {
      return
