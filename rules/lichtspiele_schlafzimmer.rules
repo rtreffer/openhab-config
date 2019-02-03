@@ -21,7 +21,7 @@ when
     // recompute every 60 seconds
     Time cron "45 * * ? * * *"
 then
-  if ((Schlafzimmer_Brightness.state as PercentType).intValue <= 0) {
+  if ((Schlafzimmer_Brightness.state == NULL) || (Schlafzimmer_Brightness.state as PercentType).intValue <= 0) {
     return
   }
   val current = (Schlafzimmer_ColorTemperature.state as PercentType).intValue

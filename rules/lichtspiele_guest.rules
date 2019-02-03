@@ -7,7 +7,7 @@ then
     return
   }
 
-  if ((Gaestezimmer_Fenster_Color.state as PercentType).intValue > 0) {
+  if ((Gaestezimmer_Fenster_Color.state != NULL) && (Gaestezimmer_Fenster_Color.state as PercentType).intValue > 0) {
     val current = (Gaestezimmer_Fenster_ColorTemperature.state as PercentType).intValue
     val desired = (DaylightCT.state as PercentType).intValue
     if (Math.abs(current - desired) >= 1) {
@@ -15,7 +15,7 @@ then
     }
   }
 
-  if ((Gaestezimmer_Couch_Color.state as PercentType).intValue > 0) {
+  if ((Gaestezimmer_Couch_Color.state != NULL) && (Gaestezimmer_Couch_Color.state as PercentType).intValue > 0) {
     val current = (Gaestezimmer_Couch_ColorTemperature.state as PercentType).intValue
     val desired = (DaylightCT.state as PercentType).intValue
     if (Math.abs(current - desired) >= 1) {

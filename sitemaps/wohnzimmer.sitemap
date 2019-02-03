@@ -4,6 +4,13 @@ sitemap wohnzimmer label="Wohnzimmer" {
     Text item=Motion_Wohnzimmer_Illuminance label="Helligkeit [%.0f]"
     Text item=Motion_Wohnzimmer_Occupancy   label="Anwesenheit [MAP(occupancy.map):%s]"
   }
+  Frame label="Tischlampe Arbeitsmodus" {
+    Switch item=WorkLamp1 label="1"
+    Switch item=WorkLamp2 label="2"
+    Switch item=WorkLamp3 label="3"
+    Switch item=WorkLamp4 label="4"
+    Switch item=WorkLamp5 label="5"
+  }
   Frame label="Beamer" {
     Switch item=Projector_Power      label="Power"
     Slider item=Projector_Brightness label="Helligkeit [%.1f]"
